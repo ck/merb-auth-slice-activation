@@ -1,0 +1,14 @@
+pkg
+pkg/*
+*/pkg/*
+*.log
+log
+!log*.rb
+*/log
+log/*
+*/log/*
+coverage
+*/coverage
+bundle
+*.DS_Store
+*.tmproj

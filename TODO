@@ -1,0 +1,9 @@
+TODO:
+
+- Figure out why the mailer views are not copies during mailer freeze.
+
+Remove anything that you don't need:
+
+- app/views/layout/merb-auth-slice-activation.html.erb
+- public/* any public files
+- stubs/* any stub files
