@@ -53,7 +53,7 @@ Merb::BootLoader.before_app_loads do
       user.login
     end
     def fetch_user(user_id)
-      User.fisrt(:login => login)
+      User.first(:login => login)
     end
   end
 
