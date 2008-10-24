@@ -83,7 +83,7 @@ if defined?(Merb::Plugins)
   #
   # Or just call setup_default_structure! to setup a basic Merb MVC structure.
   MerbAuthSliceActivation.setup_default_structure!
-  MaAS = MerbAuthSliceActivation unless defined?(MaAS)
+  MaSA = MerbAuthSliceActivation unless defined?(MaSA)
 
   # Add dependencies for other MerbAuthSliceActivation classes below. Example:
   # dependency "merb-auth-slice-activation/other"

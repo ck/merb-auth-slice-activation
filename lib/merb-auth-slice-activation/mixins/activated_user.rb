@@ -84,24 +84,24 @@ module Merb
           end
 
           # Sends out the activation notification.
-          # Used 'Welcome' as subject if +MaAS[:activation_subject]+ is not set.
+          # Used 'Welcome' as subject if +MaSA[:activation_subject]+ is not set.
           def send_activation_notification
-            deliver_activation_email(:activation, :subject => (MaAS[:welcome_subject] || "Welcome" ))
+            deliver_activation_email(:activation, :subject => (MaSA[:welcome_subject] || "Welcome" ))
           end
 
           # Sends out the signup notification.
-          # Used 'Please Activate Your Account' as subject if +MaAS[:activation_subject]+ is not set.
+          # Used 'Please Activate Your Account' as subject if +MaSA[:activation_subject]+ is not set.
           def send_signup_notification
-            deliver_activation_email(:signup, :subject => (MaAS[:activation_subject] || "Please Activate Your Account") )
+            deliver_activation_email(:signup, :subject => (MaSA[:activation_subject] || "Please Activate Your Account") )
           end
 
           private
 
           # Helper method delivering the email.
           def deliver_activation_email(action, params)
-            from = MaAS[:from_email]
+            from = MaSA[:from_email]
             raise "No :from_email option set for Merb::Slices::config[:merb_auth_slice_activation][:from_email]" unless from
-            MaAS::ActivationMailer.dispatch_and_deliver(action, params.merge(:from => from, :to => self.email), :user => self)
+            MaSA::ActivationMailer.dispatch_and_deliver(action, params.merge(:from => from, :to => self.email), :user => self)
           end
 
           def set_activated_data!

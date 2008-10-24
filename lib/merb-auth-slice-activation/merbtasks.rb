@@ -1,5 +1,5 @@
 namespace :slices do
-  namespace :"merb-auth-slice-activation" do
+  namespace :merb_auth_slice_activation do
 
     desc "Install MerbAuthSliceActivation"
     task :install => [:preflight, :setup_directories, :copy_assets, :migrate]

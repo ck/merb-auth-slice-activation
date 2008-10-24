@@ -1,5 +1,5 @@
 namespace :slices do
-  namespace :"merb-auth-slice-activation" do
+  namespace :merb_auth_slice_activation do
 
     # add your own merb-auth-slice-activation tasks here
 

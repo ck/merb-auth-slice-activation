@@ -1,5 +1,5 @@
 namespace :slices do
-  namespace :"merb-auth-slice-activation" do
+  namespace :merb_auth_slice_activation do
 
     desc "Run slice specs within the host application context"
     task :spec => [ "spec:explain", "spec:default" ]

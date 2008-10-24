@@ -4,8 +4,8 @@ module Merb
 
       # Does it's best to
       def activation_url(user)
-        @activation_host      ||= MaAS[:activation_host] || MaAS[:default_activation_host]
-        @activation_protocol  ||= MaAS[:activation_protocol] || "http"
+        @activation_host      ||= MaSA[:activation_host] || MaSA[:default_activation_host]
+        @activation_protocol  ||= MaSA[:activation_protocol] || "http"
 
         if base_controller # Rendering from a web controller
           @activation_host      ||= base_controller.request.host
