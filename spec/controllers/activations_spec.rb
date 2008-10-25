@@ -70,12 +70,12 @@ describe "Activation in the controller" do
       ac = @user.activation_code
       ac.should_not be_nil
       @user.should_not be_active
-      request("/activation/#{ac}")
+      request("/activation/activate/#{ac}")
       User.first(:login => "barney").should be_active
     end
 
     it "should redirect after activation" do
-      r = request("/activation/#{@user.activation_code}")
+      r = request("/activation/activate/#{@user.activation_code}")
       r.should redirect
     end
   end

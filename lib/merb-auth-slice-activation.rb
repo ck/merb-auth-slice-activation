@@ -65,7 +65,7 @@ if defined?(Merb::Plugins)
     # @note prefix your named routes with :merb_auth_slice_activation_
     #   to avoid potential conflicts with global named routes.
     def self.setup_router(scope)
-      scope.match("/:activation_code").to(:controller => "activations", :action => "activate").name(:activate)
+      scope.match("/activate/:activation_code").to(:controller => "activations", :action => "activate").name(:activate)
     end
 
   end
