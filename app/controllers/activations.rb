@@ -10,7 +10,7 @@ class MerbAuthSliceActivation::Activations <  MerbAuthSliceActivation::Applicati
     session.user = Merb::Authentication.user_class.find_with_activation_code(params[:activation_code])
     raise NotFound if session.user.nil?
     if session.authenticated? && !session.user.activated?
-      session.user.activate
+      session.user.activate!
     end
     ""
   end

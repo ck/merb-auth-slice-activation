@@ -23,7 +23,7 @@ end
 The mixin provides a number of methods.  The most common are: 
 
 <pre><code>
-  @user.activate    # activates (and saves) the user
+  @user.activate!   # activates (and saves) the user
   @user.activated?  # Returns the "active" status of the user
   @user.active?     # Alias for activated?
 </pre></code>

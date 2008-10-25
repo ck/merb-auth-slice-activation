@@ -48,8 +48,8 @@ module Merb
 
         module InstanceMethods
 
-          # Activates the user.
-          def activate
+          # Activates and saves the user.
+          def activate!
             self.reload unless self.new_record? # Make sure the model is up to speed before we try to save it
             set_activated_data!
             self.save

@@ -17,7 +17,7 @@ describe "Activation in the controller" do
 
   before(:each) do
     @active_user = User.create( user_attributes(:login => "fred") )
-    @active_user.activate
+    @active_user.activate!
     @user = User.create( user_attributes(:login => "barney", :email => "barney@example.com"))
 
     class TestStrategy < Merb::Authentication::Strategy
@@ -57,7 +57,7 @@ describe "Activation in the controller" do
       @user.should_not be_active
       result = request("/foos", :params => {:login => "barney"})
       result.status.should == 401
-      @user.activate
+      @user.activate!
       result = request("/foos", :params => {:login => "barney"})
       result.should be_successful
       result.body.should == "INDEX"
