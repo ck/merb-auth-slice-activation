@@ -27,7 +27,7 @@ if defined?(Merb::Plugins)
 
     # Slice metadata
     self.description = "MerbAuthSliceActivation is a merb slice that adds basic activation for merb-auth-based merb applications."
-    self.version = "0.9.14"
+    self.version = "1.0"
     self.author = "Daniel Neighman, Christian Kebekus"
 
     # Stub classes loaded hook - runs before LoadClasses BootLoader
