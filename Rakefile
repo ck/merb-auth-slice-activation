@@ -10,7 +10,7 @@ AUTHOR = "Daniel Neighman, Christian Kebekus"
 EMAIL = "has.sox@gmail.com"
 HOMEPAGE = "http://merbivore.com/"
 SUMMARY = "Merb Slice that adds basic activation functionality to merb-auth."
-GEM_VERSION = "0.9.10"
+GEM_VERSION = "0.9.14"
 
 spec = Gem::Specification.new do |s|
   s.rubyforge_project = 'merb'
@@ -24,10 +24,10 @@ spec = Gem::Specification.new do |s|
   s.author = AUTHOR
   s.email = EMAIL
   s.homepage = HOMEPAGE
-  s.add_dependency('merb-slices', '>= 0.9.10')
-  s.add_dependency('merb-auth-core', ">= 0.9.10")
-  s.add_dependency('merb-auth-more', ">= 0.9.10")
-  s.add_dependency('merb-mailer', ">= 0.9.10")
+  s.add_dependency('merb-slices', '>= 0.9.14')
+  s.add_dependency('merb-auth-core', ">= 0.9.14")
+  s.add_dependency('merb-auth-more', ">= 0.9.14")
+  s.add_dependency('merb-mailer', ">= 0.9.14")
   s.require_path = 'lib'
   s.files = %w(LICENSE README.textile Rakefile TODO) + Dir.glob("{lib,spec,app,public,stubs}/**/*")
 end
