@@ -32,6 +32,7 @@ Merb::Slices::config[:merb_auth_slice_activation][:activation_host]   = "example
 
 Merb::BootLoader.before_app_loads do
   
+  require "datamapper"
   DataMapper.setup(:default, "sqlite3::memory:")
   class User
     include DataMapper::Resource

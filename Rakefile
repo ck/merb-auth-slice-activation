@@ -10,7 +10,7 @@ AUTHOR = "Daniel Neighman, Christian Kebekus"
 EMAIL = "has.sox@gmail.com"
 HOMEPAGE = "http://merbivore.com/"
 SUMMARY = "Merb Slice that adds basic activation functionality to merb-auth."
-GEM_VERSION = "1.0"
+GEM_VERSION = "1.0.7.1"
 
 spec = Gem::Specification.new do |s|
   s.rubyforge_project = 'merb'

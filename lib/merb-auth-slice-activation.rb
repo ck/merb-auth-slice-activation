@@ -2,10 +2,10 @@ if defined?(Merb::Plugins)
 
   $:.unshift File.dirname(__FILE__)
 
-  load_dependency 'merb-slices'
-  load_dependency 'merb-auth-core'
-  load_dependency 'merb-auth-more'
-  load_dependency 'merb-mailer'
+  require 'merb-slices'
+  require 'merb-auth-core'
+  require 'merb-auth-more'
+  require 'merb-mailer'
   require(File.expand_path(File.dirname(__FILE__) / "merb-auth-slice-activation" / "mixins") / "activated_user")
   
   Merb::Plugins.add_rakefiles "merb-auth-slice-activation/merbtasks", "merb-auth-slice-activation/slicetasks", "merb-auth-slice-activation/spectasks"
@@ -27,7 +27,7 @@ if defined?(Merb::Plugins)
 
     # Slice metadata
     self.description = "MerbAuthSliceActivation is a merb slice that adds basic activation for merb-auth-based merb applications."
-    self.version = "1.0"
+    self.version = "1.0.7.1"
     self.author = "Daniel Neighman, Christian Kebekus"
 
     # Stub classes loaded hook - runs before LoadClasses BootLoader
